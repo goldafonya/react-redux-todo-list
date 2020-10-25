@@ -1,0 +1,39 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react-hooks"
+    ],
+    "rules": {
+        "no-console": "warn",
+        "indent": [
+            "error",
+            4
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "no-unused-vars": "off",
+        "semi-spacing": "error",
+        "space-before-blocks": "error",
+        "space-unary-ops": "error",
+        "no-trailing-spaces": "error",
+        "consistent-return": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    }
+}
