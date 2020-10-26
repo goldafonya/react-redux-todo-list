@@ -9,6 +9,11 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
     },
+    devServer:{
+        historyApiFallback: {
+            index: "index.html"
+        }
+    },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
     },

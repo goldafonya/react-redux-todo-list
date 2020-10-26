@@ -7,6 +7,7 @@ import { ToDoItem } from "../ToDoItem/ToDoItem";
 import { useToDoList } from "./useToDoList";
 import AddIcon from "@material-ui/icons/Add";
 import { makeStyles } from "@material-ui/core/styles";
+import { RouteComponentProps } from "@reach/router";
 
 const useStyles = makeStyles(() => ({
     paper: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const ToDoList:FC = () =>{
+export const ToDoList:FC<RouteComponentProps> = () =>{
     const {
         todoList,
         addToDo,
@@ -23,7 +24,7 @@ export const ToDoList:FC = () =>{
     }=useToDoList();
     const classes = useStyles();
 
-    console.log("render ToDoList, date:",new Date().toISOString());
+    console.log("render ToDoList hooks, date:",new Date().toISOString());
     return (
         <Paper className={classes.paper}>
             <Typography variant="h3" gutterBottom>

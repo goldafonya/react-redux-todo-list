@@ -14,7 +14,7 @@
         "react-hooks"
     ],
     "rules": {
-        "no-console": "warn",
+        "no-console": "off",
         "indent": [
             "error",
             4

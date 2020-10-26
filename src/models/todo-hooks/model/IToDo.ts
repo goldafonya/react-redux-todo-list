@@ -1,4 +1,6 @@
-export interface IToDo {
-    id:string;
-    text:string;
+import { nanoid } from "@reduxjs/toolkit";
+
+export class ToDo {
+    id:string=nanoid();
+    text="";
 }

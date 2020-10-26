@@ -3,10 +3,10 @@ import ListItem from "@material-ui/core/ListItem";
 import TextField from "@material-ui/core/TextField";
 import DeleteIcon from "@material-ui/icons/Delete";
 import React, { FC, memo } from "react";
-import { IToDo } from "../model/IToDo";
+import { ToDo } from "../model/IToDo";
 
 interface IToDoItemProps {
-    item:IToDo;
+    item:ToDo;
     updateHandler:(id:string, value:string)=>void;
     deleteHandler:(id:string)=>void;
     index:number;
@@ -19,7 +19,7 @@ export const ToDoItem:FC<IToDoItemProps>=memo(({
     index
 })=>{
 
-    console.log("render ToDoItem");
+    console.log("render ToDoItem hooks");
     return (
         <ListItem>
             <div style={{marginRight:"4px"}}>{index+1}</div>

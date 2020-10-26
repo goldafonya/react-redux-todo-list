@@ -1,16 +1,15 @@
-import { IToDo } from "../model/IToDo";
-import { useState, useCallback } from "react";
-import { nanoid } from "@reduxjs/toolkit";
+import { useCallback, useState } from "react";
+import { ToDo } from "../model/IToDo";
 
-export const useToDoList=(initList:Array<IToDo>=[]):{
-    todoList:Array<IToDo>;
+export const useToDoList=(initList:Array<ToDo>=[]):{
+    todoList:Array<ToDo>;
     addToDo:()=>void;
     deleteToDo:(id:string)=>void;
     updateToDoById:(id:string,value:string)=>void;
 }=>{
-    const [todoList,setToDoList]=useState<Array<IToDo>>(initList);
+    const [todoList,setToDoList]=useState<Array<ToDo>>(initList);
     const addToDo=useCallback(()=>{
-        setToDoList(list=>[...list,{id:nanoid(),text:""}]);
+        setToDoList(list=>[...list,new ToDo()]);
     },[]);
     const deleteToDo=useCallback((id:string)=>{
         setToDoList(list=>list.filter(i=>i.id!==id));
