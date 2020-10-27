@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { ToDo } from "../model/IToDo";
+import { ToDo } from "../../../models/IToDo";
 
 export const useToDoList=(initList:Array<ToDo>=[]):{
     todoList:Array<ToDo>;

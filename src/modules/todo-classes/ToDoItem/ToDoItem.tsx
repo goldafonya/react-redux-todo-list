@@ -3,6 +3,7 @@ import ListItem from "@material-ui/core/ListItem";
 import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { ToDo } from "../../../models/IToDo";
 
 interface IToDoItemProps {
     item:ToDo;

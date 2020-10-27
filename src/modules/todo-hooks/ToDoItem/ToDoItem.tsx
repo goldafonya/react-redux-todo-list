@@ -3,7 +3,7 @@ import ListItem from "@material-ui/core/ListItem";
 import TextField from "@material-ui/core/TextField";
 import DeleteIcon from "@material-ui/icons/Delete";
 import React, { FC, memo } from "react";
-import { ToDo } from "../model/IToDo";
+import { ToDo } from "../../../models/IToDo";
 
 interface IToDoItemProps {
     item:ToDo;

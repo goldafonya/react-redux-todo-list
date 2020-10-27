@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { ToDo } from "../../todo-hooks/model/IToDo";
+import { ToDo } from "../../../models/IToDo";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
@@ -7,6 +7,7 @@ import { withStyles, WithStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import { ToDoItem } from "../ToDoItem/ToDoItem";
+import { RouteComponentProps } from "@reach/router";
 
 const styles={
     paper: {
@@ -14,7 +15,7 @@ const styles={
     },
 };
 
-type IToDoListProps = WithStyles<typeof styles>;
+type IToDoListProps = WithStyles<typeof styles> & RouteComponentProps;
 type IToDoListState={list:Array<ToDo>};
 
 class ToDoList extends React.Component<IToDoListProps,IToDoListState> {
