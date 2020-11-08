@@ -53,7 +53,7 @@ export const App: FC = () => {
                 />
                 <BottomNavigationAction
                     onClick={()=>navigate(routes["todo-hook-redux"])}
-                    label="Hooks redux"
+                    label="Hooks Redux"
                     icon={<FavoriteIcon />}
                 />
                 <BottomNavigationAction
